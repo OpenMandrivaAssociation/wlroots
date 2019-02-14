@@ -19,6 +19,7 @@ BuildRequires:  meson
 BuildRequires:  pixman-devel
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  pkgconfig(gbm)
+BuildRequires:  pkgconfig(egl)
 BuildRequires:  wayland-devel
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  xcb-util-image-devel
