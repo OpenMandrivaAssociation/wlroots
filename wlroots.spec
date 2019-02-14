@@ -20,6 +20,7 @@ BuildRequires:  pixman-devel
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  pkgconfig(gbm)
 BuildRequires:  pkgconfig(egl)
+BuildRequires:  pkgconfig(glesv2)
 BuildRequires:  wayland-devel
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  xcb-util-image-devel
