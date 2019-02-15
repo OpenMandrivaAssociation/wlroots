@@ -58,10 +58,6 @@ Development files for %{name}.
 %autosetup
 
 %build
-%ifarch %{arm} %{ix86}
-export CFLAGS="%{optflags} -Wno-error=format="
-export CXXFLAGS="%{optflags} -Wno-error=format="
-%endif
 %meson
 %meson_build
 
