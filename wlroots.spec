@@ -24,6 +24,8 @@ BuildRequires:  pkgconfig(glesv2)
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  pkgconfig(xcb-errors)
+BuildRequires:  pkgconfig(libglvnd)
+
 BuildRequires:  wayland-devel
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  xcb-util-image-devel
