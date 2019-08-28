@@ -4,8 +4,8 @@
 
 
 Name:           wlroots
-Version:        0.6.0
-Release:        1
+Version:	0.7.0
+Release:	1
 Summary:        A modular Wayland compositor library
 License:        MIT
 URL:            https://github.com/swaywm/%{name}
