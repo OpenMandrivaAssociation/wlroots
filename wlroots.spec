@@ -4,7 +4,7 @@
 
 
 Name:           wlroots
-Version:	0.7.0
+Version:	0.8.1
 Release:	1
 Summary:        A modular Wayland compositor library
 License:        MIT
@@ -24,10 +24,12 @@ BuildRequires:  pkgconfig(egl)
 BuildRequires:  pkgconfig(glesv2)
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(systemd)
+BuildRequires:  pkgconfig(libdrm)
 BuildRequires:  pkgconfig(xcb-errors)
 BuildRequires:  pkgconfig(libglvnd)
 
 BuildRequires:  wayland-devel
+BuildRequires:  ffmpeg-devel
 BuildRequires:  wayland-protocols-devel
 BuildRequires:  xcb-util-image-devel
 BuildRequires:  xcb-util-wm-devel
