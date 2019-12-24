@@ -5,11 +5,12 @@
 
 Name:           wlroots
 Version:	0.8.1
-Release:	1
+Release:	2
 Summary:        A modular Wayland compositor library
 License:        MIT
 URL:            https://github.com/swaywm/%{name}
 Source0:	https://github.com/swaywm/wlroots/archive/%{version}.tar.gz
+Patch0:		1863.patch
 
 BuildRequires:  libcap-devel
 BuildRequires:  libinput-devel
