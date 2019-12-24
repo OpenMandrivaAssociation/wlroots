@@ -22,6 +22,7 @@ BuildRequires:  pkgconfig(freerdp2)
 BuildRequires:  pkgconfig(systemd)
 BuildRequires:  pkgconfig(gbm)
 BuildRequires:  pkgconfig(egl)
+BuildRequires:  egl-devel
 BuildRequires:  pkgconfig(glesv2)
 BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(systemd)
