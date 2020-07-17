@@ -1,17 +1,17 @@
-%define major	5
+%define major	6
 %define libname	%mklibname wlroots %{major}
 %define devname	%mklibname -d wlroots
 
 
 Name:           wlroots
-Version:	0.10.1
+Version:	0.11.0
 Release:	1
 Summary:        A modular Wayland compositor library
 License:        MIT
 URL:            https://github.com/swaywm/%{name}
 Source0:	https://github.com/swaywm/wlroots/archive/%{version}.tar.gz
 
-BuildRequires:  libcap-devel
+BuildRequires:  pkgconfig(libcap)
 BuildRequires:  libinput-devel
 BuildRequires:  png-devel
 BuildRequires:  libxkbcommon-devel
@@ -62,7 +62,7 @@ Development files for %{name}.
 %autosetup
 
 %build
-%meson
+%meson -Dlogind-provider=systemd
 %meson_build
 
 %install
