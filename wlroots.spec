@@ -12,7 +12,6 @@ URL:            https://github.com/swaywm/%{name}
 Source0:	https://github.com/swaywm/wlroots/archive/%{version}.tar.gz
 
 BuildRequires:  pkgconfig(libcap)
-BuildRequires:  pkgconfig(libseat)
 BuildRequires:  libinput-devel
 BuildRequires:  png-devel
 BuildRequires:  libxkbcommon-devel
@@ -63,7 +62,7 @@ Development files for %{name}.
 %autosetup
 
 %build
-%meson -Dlogind-provider=systemd
+%meson -Dlogind-provider=systemd -Dlibseat=disabled
 %meson_build
 
 %install
