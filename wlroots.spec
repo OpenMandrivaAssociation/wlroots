@@ -1,68 +1,68 @@
-%define major	7
-%define libname	%mklibname wlroots %{major}
-%define devname	%mklibname -d wlroots
+%define major 7
+%define libname %mklibname wlroots %{major}
+%define devname %mklibname -d wlroots
 
-
-Name:           wlroots
+Name:		wlroots
 Version:	0.12.0
-Release:	1
-Summary:        A modular Wayland compositor library
-License:        MIT
-URL:            https://github.com/swaywm/%{name}
+Release:	2
+Summary:	A modular Wayland compositor library
+License:	MIT
+URL:		https://github.com/swaywm/%{name}
 Source0:	https://github.com/swaywm/wlroots/archive/%{version}.tar.gz
 
-BuildRequires:  pkgconfig(libcap)
-BuildRequires:  libinput-devel
-BuildRequires:  png-devel
-BuildRequires:  libxkbcommon-devel
-BuildRequires:  meson
-BuildRequires:  pixman-devel
-BuildRequires:  pkgconfig(freerdp2)
-BuildRequires:  pkgconfig(systemd)
-BuildRequires:  pkgconfig(gbm)
-BuildRequires:  pkgconfig(egl)
-BuildRequires:  egl-devel
-BuildRequires:  pkgconfig(glesv2)
-BuildRequires:  pkgconfig(libudev)
-BuildRequires:  pkgconfig(systemd)
-BuildRequires:  pkgconfig(libdrm)
-BuildRequires:  pkgconfig(xcb-errors)
-BuildRequires:  pkgconfig(libglvnd)
-
-BuildRequires:  wayland-devel
-BuildRequires:  ffmpeg-devel
-BuildRequires:  wayland-protocols-devel
-BuildRequires:  xcb-util-image-devel
-BuildRequires:  xcb-util-wm-devel
+BuildRequires:	pkgconfig(libcap)
+BuildRequires:	pkgconfig(libinput)
+BuildRequires:	pkgconfig(libpng)
+BuildRequires:	pkgconfig(xkbcommon)
+BuildRequires:	meson
+BuildRequires:	pkgconfig(pixman-1)
+BuildRequires:	pkgconfig(freerdp2)
+BuildRequires:	pkgconfig(systemd)
+BuildRequires:	pkgconfig(gbm)
+BuildRequires:	pkgconfig(egl)
+BuildRequires:	pkgconfig(glesv2)
+BuildRequires:	pkgconfig(libudev)
+BuildRequires:	pkgconfig(systemd)
+BuildRequires:	pkgconfig(libdrm)
+BuildRequires:	pkgconfig(xcb-errors)
+BuildRequires:	pkgconfig(libglvnd)
+BuildRequires:	pkgconfig(wayland-client)
+BuildRequires:	pkgconfig(wayland-egl)
+BuildRequires:	pkgconfig(wayland-protocols)
+BuildRequires:	pkgconfig(wayland-scanner)
+BuildRequires:	pkgconfig(wayland-server)
+BuildRequires:	pkgconfig(libavutil)
+BuildRequires:	pkgconfig(xcb)
+BuildRequires:	pkgconfig(x11-xcb)
+BuildRequires:	pkgconfig(xcb-icccm)
 
 %description
 %{summary}.
 
-%package -n     %{libname}
-Summary:        Library files for %{name}
+%package -n %{libname}
+Summary:	Library files for %{name}
 
 %description -n %{libname}
-A modular Wayland compositor library
+A modular Wayland compositor library.
 
-%package -n     %{devname}
-Summary:        Development files for %{name}
-
-Requires:       %{libname} = %{EVRD}
-Requires:       libinput-devel
-Requires:       xcb-devel
-Requires:       libxkbcommon-devel
-Requires:       pixman-devel
-Requires:       wayland-devel
-Requires:       xcb-util-wm-devel
+%package -n %{devname}
+Summary:	Development files for %{name}
+Requires:	%{libname} = %{EVRD}
+Requires:	pkgconfig(libinput)
+Requires:	pkgconfig(xcb)
+Requires:	pkgconfig(xkbcommon)
+Requires:	pkgconfig(pixman-1)
+Requires:	pkgconfig(wayland-protocols)
+Requires:	pkgconfig(xcb-icccm)
 
 %description -n %{devname}
 Development files for %{name}.
 
 %prep
-%autosetup
+%autosetup -p1
 
 %build
-%meson -Dlogind-provider=systemd -Dlibseat=disabled
+%meson -Dlogind-provider=systemd -Dlibseat=disabled -Dxcb-errors=disabled -Dexamples=false
 %meson_build
 
 %install
