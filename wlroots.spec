@@ -36,6 +36,8 @@ BuildRequires:	pkgconfig(libavutil)
 BuildRequires:	pkgconfig(xcb)
 BuildRequires:	pkgconfig(x11-xcb)
 BuildRequires:	pkgconfig(xcb-icccm)
+BuildRequires:	pkgconfig(uuid)
+BuildRequires:	pkgconfig(xcb-renderutil)
 
 %description
 %{summary}.
