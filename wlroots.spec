@@ -1,9 +1,9 @@
-%define major 8
+%define major 9
 %define libname %mklibname wlroots %{major}
 %define devname %mklibname -d wlroots
 
 Name:		wlroots
-Version:	0.13.0
+Version:	0.14.0
 Release:	1
 Summary:	A modular Wayland compositor library
 License:	MIT
@@ -15,6 +15,7 @@ BuildRequires:	pkgconfig(libinput)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(xwayland)
+BuildRequires:	pkgconfig(libseat)
 BuildRequires:	meson
 BuildRequires:	pkgconfig(pixman-1)
 BuildRequires:	pkgconfig(freerdp2)
@@ -65,7 +66,7 @@ Development files for %{name}.
 %autosetup -p1
 
 %build
-%meson -Dlogind-provider=systemd -Dlibseat=disabled -Dxcb-errors=disabled -Dexamples=false
+%meson -Dlogind-provider=systemd -Dxcb-errors=disabled -Dexamples=false
 %meson_build
 
 %install
