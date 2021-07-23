@@ -3,7 +3,7 @@
 %define devname %mklibname -d wlroots
 
 Name:		wlroots
-Version:	0.14.0
+Version:	0.14.1
 Release:	1
 Summary:	A modular Wayland compositor library
 License:	MIT
