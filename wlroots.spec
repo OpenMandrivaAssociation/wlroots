@@ -41,7 +41,7 @@ BuildRequires:	pkgconfig(x11-xcb)
 BuildRequires:	pkgconfig(xcb-icccm)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(xcb-renderutil)
-BuildRequires:  glslang-devel
+BuildRequires:  glslang
 
 %description
 %{summary}.
