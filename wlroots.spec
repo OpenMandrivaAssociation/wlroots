@@ -69,7 +69,9 @@ Development files for %{name}.
 %autosetup -p1 %{?snapshot:-n %{name}-master}
 
 %build
-%meson -Dlogind-provider=systemd -Dxcb-errors=disabled -Dexamples=false
+%meson  \
+        -Dxcb-errors=disabled \
+        -Dexamples=false
 %meson_build
 
 %install
