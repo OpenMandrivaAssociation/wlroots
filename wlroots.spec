@@ -1,7 +1,7 @@
 %define major 10
 %define libname %mklibname wlroots %{major}
 %define devname %mklibname -d wlroots
-%define snapshot 20211107
+#define snapshot 20211107
 
 Name:		wlroots
 Version:	0.15.0
@@ -9,7 +9,7 @@ Release:	%{?snapshot:0.%{snapshot}.}1
 Summary:	A modular Wayland compositor library
 License:	MIT
 URL:		https://gitlab.freedesktop.org/wlroots/wlroots/
-Source0:	https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/master/wlroots-master.tar.bz2
+Source0:	https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/%{version}/wlroots-%{version}.tar.bz2
 
 BuildRequires:	pkgconfig(libcap)
 BuildRequires:	pkgconfig(libinput)
