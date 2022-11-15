@@ -11,6 +11,7 @@ License:	MIT
 URL:		https://gitlab.freedesktop.org/wlroots/wlroots/
 Source0:	https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/%{version}/wlroots-%{version}.tar.bz2
 
+BuildRequires:  pkgconfig(hwdata)
 BuildRequires:	pkgconfig(libcap)
 BuildRequires:	pkgconfig(libinput)
 BuildRequires:	pkgconfig(libpng)
