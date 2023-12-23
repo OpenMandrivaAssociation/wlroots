@@ -1,4 +1,4 @@
-%define major 11
+%define major 12
 %define libname %mklibname wlroots %{major}
 %define devname %mklibname -d wlroots
 #define snapshot 20211107
