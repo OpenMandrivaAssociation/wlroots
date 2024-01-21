@@ -67,7 +67,7 @@ Requires:	pkgconfig(xcb-icccm)
 Development files for %{name}.
 
 %prep
-%autosetup -p1 %{?snapshot:-n %{name}-master}
+%autosetup -p1 %{?snapshot:-n %{name}0.16-master}
 
 %build
 %meson  \
