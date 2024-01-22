@@ -1,5 +1,6 @@
 %define major 12
-%define libname %mklibname wlroots %{major}
+%define libname %mklibname wlroots
+%define oldlibname %mklibname wlroots 12
 %define devname %mklibname -d wlroots
 #define snapshot 20211107
 
@@ -14,6 +15,7 @@ Source0:	https://gitlab.freedesktop.org/wlroots/wlroots/-/archive/%{version}/wlr
 BuildRequires:	pkgconfig(libcap)
 BuildRequires:	pkgconfig(libinput)
 BuildRequires:	pkgconfig(libpng)
+BuildRequires:  pkgconfig(libliftoff)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(xwayland)
 BuildRequires:	pkgconfig(libseat)
@@ -50,6 +52,7 @@ BuildRequires:  glslang
 
 %package -n %{libname}
 Summary:	Library files for %{name}
+%rename %{oldlibname}
 
 %description -n %{libname}
 A modular Wayland compositor library.
