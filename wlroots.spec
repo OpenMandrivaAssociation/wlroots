@@ -87,6 +87,6 @@ Development files for %{name}.
 #{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{devname}
-%{_includedir}/wlr
-%{_libdir}/lib%{name}.so
-%{_libdir}/pkgconfig/%{name}.pc
+#{_includedir}/wlr
+#{_libdir}/lib%{name}.so
+#{_libdir}/pkgconfig/%{name}.pc
