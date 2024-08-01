@@ -5,7 +5,7 @@
 #define snapshot 20211107
 
 Name:		wlroots
-Version:	0.17.4
+Version:	0.18.0
 Release:	1
 Summary:	A modular Wayland compositor library
 License:	MIT
@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(libcap)
 BuildRequires:	pkgconfig(libinput)
 BuildRequires:	pkgconfig(libpng)
 BuildRequires:  pkgconfig(libliftoff)
+BuildRequires:  pkgconfig(lcms2)
 BuildRequires:	pkgconfig(xkbcommon)
 BuildRequires:	pkgconfig(xwayland)
 BuildRequires:	pkgconfig(libseat)
@@ -83,9 +84,8 @@ Development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/lib%{name}.so.%{major}*
+%{_libdir}/libwlroots-0.18.so
 
 %files -n %{devname}
-%{_includedir}/wlr
-%{_libdir}/lib%{name}.so
-%{_libdir}/pkgconfig/%{name}.pc
+%{_includedir}/wlroots-0.18/wlr/
+%{_libdir}/pkgconfig/wlroots-0.18.pc
