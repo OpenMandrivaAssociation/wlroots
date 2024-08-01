@@ -84,7 +84,7 @@ Development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/lib%{name}.so.%{major}*
+#{_libdir}/lib%{name}.so.%{major}*
 
 %files -n %{devname}
 %{_includedir}/wlr
