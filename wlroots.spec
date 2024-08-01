@@ -84,9 +84,8 @@ Development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-#{_libdir}/lib%{name}.so.%{major}*
+%{_libdir}/libwlroots-0.18.so
 
 %files -n %{devname}
-#{_includedir}/wlr
-#{_libdir}/lib%{name}.so
-#{_libdir}/pkgconfig/%{name}.pc
+%{_includedir}/wlroots-0.18/wlr/
+%{_libdir}/pkgconfig/wlroots-0.18.pc
