@@ -5,7 +5,7 @@
 #define snapshot 20211107
 
 Name:		wlroots
-Version:	0.18.0
+Version:	0.18.1
 Release:	2
 Summary:	A modular Wayland compositor library
 License:	MIT
