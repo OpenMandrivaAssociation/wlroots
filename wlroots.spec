@@ -1,4 +1,4 @@
-%define major 12
+%define major 19
 %define libname %mklibname wlroots
 %define oldlibname %mklibname wlroots 12
 %define devname %mklibname -d wlroots
@@ -84,8 +84,8 @@ Development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/libwlroots-0.18.so
+%{_libdir}/libwlroots-0.%{major}.so
 
 %files -n %{devname}
-%{_includedir}/wlroots-0.18/wlr/
-%{_libdir}/pkgconfig/wlroots-0.18.pc
+%{_includedir}/wlroots-0.%{major}/wlr/
+%{_libdir}/pkgconfig/wlroots-0.%{major}.pc
