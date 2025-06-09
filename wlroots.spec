@@ -1,11 +1,11 @@
-%define major 12
+%define major 19
 %define libname %mklibname wlroots
 %define oldlibname %mklibname wlroots 12
 %define devname %mklibname -d wlroots
 #define snapshot 20211107
 
 Name:		wlroots
-Version:	0.18.2
+Version:	0.19.0
 Release:	1
 Summary:	A modular Wayland compositor library
 License:	MIT
@@ -46,6 +46,7 @@ BuildRequires:	pkgconfig(x11-xcb)
 BuildRequires:	pkgconfig(xcb-icccm)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(xcb-renderutil)
+BuildRequires:  pkgconfig(xcb-errors)
 BuildRequires:  glslang
 
 %description
@@ -76,7 +77,7 @@ Development files for %{name}.
 
 %build
 %meson  \
-        -Dxcb-errors=disabled \
+        -Dxcb-errors=enabled \
         -Dexamples=false
 %meson_build
 
@@ -84,8 +85,8 @@ Development files for %{name}.
 %meson_install
 
 %files -n %{libname}
-%{_libdir}/libwlroots-0.18.so
+%{_libdir}/libwlroots-0.%{major}.so
 
 %files -n %{devname}
-%{_includedir}/wlroots-0.18/wlr/
-%{_libdir}/pkgconfig/wlroots-0.18.pc
+%{_includedir}/wlroots-0.%{major}/wlr/
+%{_libdir}/pkgconfig/wlroots-0.%{major}.pc
