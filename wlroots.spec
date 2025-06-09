@@ -46,6 +46,7 @@ BuildRequires:	pkgconfig(x11-xcb)
 BuildRequires:	pkgconfig(xcb-icccm)
 BuildRequires:	pkgconfig(uuid)
 BuildRequires:	pkgconfig(xcb-renderutil)
+BuildRequires:  pkgconfig(xcb-errors)
 BuildRequires:  glslang
 
 %description
@@ -76,7 +77,7 @@ Development files for %{name}.
 
 %build
 %meson  \
-        -Dxcb-errors=disabled \
+        -Dxcb-errors=enabled \
         -Dexamples=false
 %meson_build
 
