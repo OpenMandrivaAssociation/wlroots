@@ -6,7 +6,7 @@
 
 Name:		wlroots
 Version:	0.19.1
-Release:	1
+Release:	2
 Summary:	A modular Wayland compositor library
 License:	MIT
 URL:		https://gitlab.freedesktop.org/wlroots/wlroots/
